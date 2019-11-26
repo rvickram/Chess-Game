@@ -1,6 +1,7 @@
 # intellij files
-.idea/
+.idea/*
 *.iml
+out/*
 
 # Compiled class file
 *.class
