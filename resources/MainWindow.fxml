@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.231" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="buttonDrawBoard" layoutX="106.0" layoutY="22.0" mnemonicParsing="false" onAction="#actionDrawBoard" text="Draw Board" />
+      <Button fx:id="buttonAddWhite" layoutX="198.0" layoutY="22.0" mnemonicParsing="false" onAction="#actionAddWhite" text="Add White Pieces" />
+      <Button fx:id="buttonAddBlack" layoutX="322.0" layoutY="22.0" mnemonicParsing="false" onAction="#actionAddBlack" text="Add Black Pieces" />
+      <Button fx:id="buttonReset" layoutX="444.0" layoutY="22.0" mnemonicParsing="false" onAction="#actionReset" text="Reset" />
+   </children>
+</AnchorPane>
