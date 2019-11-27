@@ -64,13 +64,65 @@ public class MainWindowController {
     //region fxml actions
     @FXML
     void actionAddBlack(ActionEvent event) {
+        Canvas canvas = new Canvas();
+        canvas.setHeight(this.boardPane.getHeight());
+        canvas.setWidth(this.boardPane.getWidth());
+        this.boardPane.getChildren().add(canvas);
 
+        Piece piece = new Piece();
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.BLACK, PieceFactory.PieceType.ROOK, 0, 350);
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.BLACK, PieceFactory.PieceType.KNIGHT, 50, 350);
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.BLACK, PieceFactory.PieceType.BISHOP, 100, 350);
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.BLACK, PieceFactory.PieceType.QUEEN, 150, 350);
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.BLACK, PieceFactory.PieceType.KING, 200, 350);
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.BLACK, PieceFactory.PieceType.BISHOP, 250, 350);
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.BLACK, PieceFactory.PieceType.KNIGHT, 300, 350);
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.BLACK, PieceFactory.PieceType.ROOK, 350, 350);
+
+        for (int i = 0; i < 8; i++) {
+            piece.drawPiece(canvas.getGraphicsContext2D(),
+                    BoardSquareFactory.BoardColour.BLACK, PieceFactory.PieceType.PAWN, i * 50, 300);
+        }
     }
 
 
     @FXML
     void actionAddWhite(ActionEvent event) {
+        Canvas canvas = new Canvas();
+        canvas.setHeight(this.boardPane.getHeight());
+        canvas.setWidth(this.boardPane.getWidth());
+        this.boardPane.getChildren().add(canvas);
 
+        Piece piece = new Piece();
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.WHITE, PieceFactory.PieceType.ROOK, 0, 0);
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.WHITE, PieceFactory.PieceType.KNIGHT, 50, 0);
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.WHITE, PieceFactory.PieceType.BISHOP, 100, 0);
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.WHITE, PieceFactory.PieceType.QUEEN, 150, 0);
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.WHITE, PieceFactory.PieceType.KING, 200, 0);
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.WHITE, PieceFactory.PieceType.BISHOP, 250, 0);
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.WHITE, PieceFactory.PieceType.KNIGHT, 300, 0);
+        piece.drawPiece(canvas.getGraphicsContext2D(),
+                BoardSquareFactory.BoardColour.WHITE, PieceFactory.PieceType.ROOK, 350, 0);
+
+        for (int i = 0; i < 8; i++) {
+            piece.drawPiece(canvas.getGraphicsContext2D(),
+                    BoardSquareFactory.BoardColour.WHITE, PieceFactory.PieceType.PAWN, i*50, 50);
+        }
     }
 
 
